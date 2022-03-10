@@ -21,7 +21,7 @@ gulp.task('clean', () => {
 });
 
 gulp.src("./source/**/!(_)*.ejs")
-  
+
 gulp.task('ejs', () => {
   return gulp.src(['./source/**/!(_)*.ejs'])
     .pipe(ejs({
@@ -45,7 +45,7 @@ gulp.task('sass', function () {
   return gulp.src(['./source/stylesheets/**/*.sass', './source/stylesheets/**/*.scss'])
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
-    .pipe($.sass({ 
+    .pipe($.sass({
       outputStyle: 'nested',
       includePaths: ['./node_modules/bootstrap/scss']
     })
